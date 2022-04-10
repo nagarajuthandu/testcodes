@@ -17,7 +17,7 @@ let fib = function(n)
     
 } 
 let fibseries = function(m){
-    let i=1,arr=[];
+   let i=1,arr=[];
     while(i<=m)
     {
     arr.push(fib(i));
@@ -32,7 +32,6 @@ let mycall = new Promise((resolve,reject)=>
 {
     if(true)
     {
-        
         resolve(fibseries(10))
     }
     else{
@@ -41,35 +40,4 @@ let mycall = new Promise((resolve,reject)=>
 })
 console.log("Promise Task started")
 mycall.then(result=>console.log(result)).catch(err=>console.log(err))
-console.log("Promise Task ended")
-
-let fact = (n) => (n<=0) ? 1: n*fact(n-1)
-
-
-function sleep(ms){
-    return new Promise((resolve) => setTimeout(resolve,ms))
-}
-
-let mycall2 = async () => {
-    if(true)
-    {
-        await sleep(5000)
-        return fact(5)
-    }
-}
-let fun1 = async () => {
-    return await mycall2()
-}
-console.log("async Task started");
-(async()=>{ console.log(await mycall2())})();
-console.log("async Task ended");
-
-
-
-
-
-
-
-
-
-
+console.log("Promise Task ended");
