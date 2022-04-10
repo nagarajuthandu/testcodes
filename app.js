@@ -27,17 +27,18 @@ let fibseries = function(m){
     
     
 }
-
-let mycall = new Promise((resolve,reject)=>
+function mypromise(n){
+return new Promise((resolve,reject)=>
 {
     if(true)
     {
-        resolve(fibseries(10))
+        resolve(fibseries(n))
     }
     else{
         reject("fail")
     }
-})
+})}
 console.log("Promise Task started")
-mycall.then(result=>console.log(result)).catch(err=>console.log(err))
+mypromise(10).then(result=>console.log(result)).catch(err=>console.log(err))
+mypromise(20).then(result=>console.log(result)).catch(err=>console.log(err))
 console.log("Promise Task ended");
