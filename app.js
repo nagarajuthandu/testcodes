@@ -8,9 +8,9 @@ let mycall = new Promise((resolve,reject)=>
         reject("fail")
     }
 })
-console.log("started")
+console.log("Task started")
 mycall.then(result=>console.log(result)).catch(err=>console.log(err))
-console.log("ended")
+console.log("Task ended")
 
 
 
